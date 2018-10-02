@@ -1,35 +1,83 @@
 #myInput {
-    background-image: url('/wp-content/themes/Avada-Child-Theme/images/searchicon.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    padding: 22px 20px 21px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+	background-image: url('/image/searchicon.png'); /* Add a search icon to input */
+	background-position: 10px 12px; /* Position the search icon */
+	background-repeat: no-repeat; /* Do not repeat the icon image */
+	width: 100%; /* Full-width */
+	padding: 11px 0px 11px 49px; /* Add some padding */
+	border: 1px solid #ddd; /* Add a grey border */
+	margin-bottom: 12px; /* Add some space below the input */
 	font-size: 16px;
 	font-weight: normal !important;
-    font-family: open sans !important;
+	font-family: open sans !important;
 }
-
 #myTable {
-    border-collapse: collapse; /* Collapse borders */
-    width: 100%; /* Full-width */
-    border: 1px solid #ddd; /* Add a grey border */ 
-    font-size: 14px;
+	border-collapse: collapse; /* Collapse borders */
+	width: 100%; /* Full-width */
+	border: 1px solid #ddd; /* Add a grey border */
+	font-size: 14px;
 }
-
 #myTable th, #myTable td {
-    text-align: left; /* Left-align text */
-    padding: 12px; /* Add padding */
+	text-align: left; /* Left-align text */
+	padding: 12px; /* Add padding */
 }
-
 #myTable tr {
-    /* Add a bottom border to all table rows */
-    border-bottom: 1px solid #ddd;
+	/* Add a bottom border to all table rows */
+	border-bottom: 1px solid #ddd;
 }
-
 #myTable tr.header, #myTable tr:hover {
-    /* Add a grey background color to the table header and on hover */
+/* Add a grey background color to the table header and on hover */
  
 }
+/* table style */
+.table-1 table th {
+	background: #f6f6f6;
+	padding: 20px 11px 20px 12px;
+	font-family: 'MuseoSlab500Regular', arial, helvetica, sans-serif;
+	text-align: left;
+}
+.table-1 tr:nth-child(even) {
+	background: #f6f6f6;
+}
+.table-1 tr td {
+	border: 1px solid #dcdcdc;
+	padding: 10px 20px;
+}
 
+
+/* Mobile Responsive */
+@media only screen and (max-width: 760px) {
+#myTable, #myTable tr {
+	border: none !important;
+}
+.table-1 tr td {
+	width: 92% !important
+}
+td, tr {
+	display: block;
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+
+thead tr {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+tr + tr {
+	margin-top: 25px;
+}
+td {
+	/* make like a "row" */
+	border: none;
+	position: relative;
+	padding-left: 50%;
+	text-align: left;
+}
+td:before {
+	content: attr(data-label);
+	display: inline-block;
+	line-height: 1.5;
+	margin-left: -100%;
+	width: 100%;
+	white-space: nowrap;
+}
+}
